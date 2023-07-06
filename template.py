@@ -4,7 +4,8 @@ import logging
 
 logging.basicConfig(level=logging.INFO, format='[%(asctime)s]: %(message)s:')
 
-project_name = 'cnnClassifier'
+
+project_name = "cnnClassifier"
 
 list_of_files = [
     ".github/workflows/.gitkeep",
@@ -24,11 +25,14 @@ list_of_files = [
     "research/trials.ipynb",
     "templates/index.html"
 
+
 ]
+
 
 for filepath in list_of_files:
     filepath = Path(filepath)
     filedir, filename = os.path.split(filepath)
+
 
     if filedir !="":
         os.makedirs(filedir, exist_ok=True)
@@ -41,4 +45,4 @@ for filepath in list_of_files:
 
 
     else:
-        logging.info(f"{filename} already exists")
+        logging.info(f"{filename} is already exists")
